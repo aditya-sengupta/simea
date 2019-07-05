@@ -1,0 +1,4 @@
+#ifndef SIMEA_MATERIALS_H
+#define SIMEA_MATERIALS_H
+
+#endif //SIMEA_MATERIALS_H
