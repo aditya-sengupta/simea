@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable (
                 simea
                 simea.cpp
-                modeler/materials.cpp
-                modeler/materials.h
+                model/materials.cpp
+                model/materials.h
                 modeler/modeler.cpp
                 modeler/modeler.h
                 modeler/readSTL.cpp
@@ -15,4 +15,6 @@ add_executable (
                 solver/solver.h
                 mesher/mesher.cpp
                 mesher/mesher.h
+                model/model.cpp
+                model/model.h
                )

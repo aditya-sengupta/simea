@@ -4,33 +4,65 @@
 #include <iostream>
 #include <string>
 
-#include "materials.h"
+#include "../model/model.h"
 
 class Modeler {
+
 private:
+
+    // stores the absolute path to the .stl import file
     std::string _filepath;
+
+    // total number of triangles in the imported geometry
     int _num_triangles;
-    // data-structure or object for imported geometry. Try linking object sub-geometries with the JSON properties.
 
 public:
+
+    /**
+     * Constructor for Modeler objects
+     */
     Modeler() {
         this->_filepath = "";
         this->_num_triangles = 0;
     }
+
+    /**
+     * Constructor for Modeler objects
+     * @param path sets the filepath of the .stl import file
+     */
     Modeler(std::string path) {
         this->_filepath = path;
         this->_num_triangles = 0;
     }
 
-    void set_filepath(std::string path) { this->_filepath = path; }
+    /**
+     * resets the filepath to the .stl import file
+     * @param path specifies the
+     */
+    void resset_filepath(std::string path) { this->_filepath = path; }
+
+    /**
+     * @return stored filepath in modeler object
+     */
     std::string filepath() { return this->_filepath; }
+
+    /**
+     * @return total parsed triangles in imported geometry
+     */
     int num_triangles() { return this->_num_triangles; }
 
+    /**
+     * reads .stl geometry file
+     * @param filepath sets filepath for the .stl import file and reads from it
+     */
     void readSTL(std::string filepath);
+
+    /**
+     * reads .stl geometry file
+     */
     void readSTL();
-    // create geometry object
-    // getter and setter for geometry object
-    // parse JSON properties
+    // initialize and store imported geometry in model object
+    // parse JSON properties for model properties/materials
 };
 
 extern Modeler modeler;
