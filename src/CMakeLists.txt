@@ -1,13 +1,18 @@
 cmake_minimum_required(VERSION 3.13)
-project(simea C)
+project(simea)
 
-set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable (
                 simea
-                main.c
-                modeler/materials.c
+                simea.cpp
+                modeler/materials.cpp
                 modeler/materials.h
-                modeler/modeler.c
+                modeler/modeler.cpp
                 modeler/modeler.h
+                modeler/readSTL.cpp
+                solver/solver.cpp
+                solver/solver.h
+                mesher/mesher.cpp
+                mesher/mesher.h
                )
