@@ -37,7 +37,7 @@ public:
 
     /**
      * resets the filepath to the .stl import file
-     * @param path specifies the
+     * @param path specifies the filepath to reset to
      */
     void resset_filepath(std::string path) { this->_filepath = path; }
 
